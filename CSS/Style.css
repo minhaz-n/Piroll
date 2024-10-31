@@ -1,0 +1,367 @@
+/* ------common css start -----*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+:root{
+    --PRIMARY-COLOR:#0FC9C3;
+    --text-color:#000000;
+    --white:#ffffff;
+    --headding-font:40px;
+    --text-font:18px;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Nunito Sans", sans-serif;
+}
+h1,h2,h3,h4,h5,h6,a{
+    font-family: "Montserrat", sans-serif;
+}
+/* ------common css ends -----*/
+
+/* ------navbar css start -----*/
+.navbar-brand{
+    font-size: 30px;
+}
+.navbar-nav li a{
+    font-size: 18px;
+    transition: all linear 0.4s;
+}
+.navbar-nav .nav-link.active{
+    color: var(--PRIMARY-COLOR);
+}
+.nav-link:hover{
+    color: var(--PRIMARY-COLOR);
+}
+/* ------navbar css ends -----*/
+
+/* ------banner css start -----*/
+#head-bg-img{
+    width: 100%;
+    background-image: url(../Images/web\ BG.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 1;
+}
+#head-bg-img::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff8c;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+}
+.banner-text h2{
+    font-size: 40px;
+    padding-top: 170px;
+    padding-bottom: 40px;
+    color: var(--text-color);
+    font-weight: bold;
+}
+.banner-text p{
+    font-size: 18px;
+    color: var(--text-color);
+}
+.btn-1{
+    background-color: var(--PRIMARY-COLOR);
+    margin-bottom: 170px;
+}
+.btn:hover{
+    background-color: var(--PRIMARY-COLOR);
+    color: var(--text-color);
+}
+/* ------banner css ends -----*/
+
+/* ------about css start -----*/
+#about{
+    width: 100%;
+    padding: 90px 0;
+}
+.about-text h2{
+    font-size: var(--headding-font);
+    font-weight: bold;
+    padding-bottom: 35px;
+}
+.about-text p{
+    font-size: var(--text-font);
+    padding-bottom: 35px;
+}
+/* ------about css ends -----*/
+
+/* ------skill css start -----*/
+#skill{
+    width: 100%;
+    padding: 165px 0;
+    background-image: url(../Images/skill-bacground.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 1;
+}
+#skill::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff8c;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+}
+.skill-text h2{
+    font-size: var(--headding-font);
+    font-weight: bold;
+    padding-bottom: 35px;
+}
+.ui-ux-design h3{
+    font-size: var(--text-font);
+    font-weight: bold;
+}
+.ui-ux-design span{
+    display: inline-block;
+    width: 90%;
+    height: 5px;
+    background-color: gray;
+    position: relative;
+    margin-bottom: 35px;
+}
+.ui-ux-design span::after,.web-development span::after,.marketing span::after{
+    content: "";
+    width: 75%;
+    height: 100%;
+    background-color: var(--PRIMARY-COLOR);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.web-development span::after{
+    width: 90%;
+}
+.marketing span::after{
+    width: 60%;
+}
+/* ------skill css ends -----*/
+
+/* ------progress-bar css start -----*/
+#progress-bar{
+    width: 100%;
+    background-color: var(--PRIMARY-COLOR);
+    padding: 48px 0;
+}
+.text{
+    color: #ffffff;
+}
+.text p{
+    margin-bottom: 0;
+}
+.progress-item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.progress-1{
+    width: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+/* ------progress-bar css ends -----*/
+
+/* ------portfolio css start -----*/
+#portfolio{
+    width: 100%;
+    background-color: var(--PRIMARY-COLOR);
+    padding: 25px 0;
+}
+.port-1{
+    width: 100%;
+    height: 250px;
+    background-color: #000000;
+    margin-top: 10px;
+    position: relative;
+}
+.port-1 img{
+    width: 100%;
+    height: 100%;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+.down-btn a{
+    color: var(--PRIMARY-COLOR);
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    line-height: 55px;
+    font-size: 25px;
+    background-color: white;
+    margin-top: 10px;
+    border-radius: 50%;
+}
+.middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+} 
+.port-1:hover img{
+    opacity: 0.3;
+  }
+.port-1:hover .middle {
+    opacity: 1;
+  }
+  
+  .text {
+    color: white;
+    font-size: 16px;
+    padding: 16px 32px;
+    cursor: pointer;
+
+  }
+/* ------portfolio css ends -----*/
+
+/* ------work process css start -----*/
+#work-process{
+    width: 100%;
+    padding: 95px 0;
+}
+.work-process-title h2{
+    font-size: var(--headding-font);
+    font-weight: bold;
+    padding-bottom: 30px;
+}
+.work-process-title p{
+    font-size: var(--text-font);
+    padding-bottom: 45px;
+}
+.process-video video{
+    width: 100%;
+    border: 2px solid var(--PRIMARY-COLOR);
+    border-radius: 15px;
+}
+/* ------work process css ends -----*/
+
+/* ------service css start -----*/
+#service{
+    width: 100%;
+    padding: 95px 0;
+}
+.service-item{
+    margin-top: 20px;
+}
+.service-item H3{
+    font-size: 18px;
+}
+.service-item img{
+    padding: 15px 0;
+}
+/* ------service css ends -----*/
+
+/* ------valuable customer css start -----*/
+#value-cus{
+    width: 100%;
+    background-color: var(--PRIMARY-COLOR);
+    padding: 95px 0;
+}
+.cus-asked .comment{
+    text-align: center;
+}
+.cus-asked .comment h4{
+    font-size: 34px;
+    color: var(--white);
+    padding-bottom: 40px;
+}
+.cus-asked .comment p{
+    font-size: 22px;
+    font-weight: bold;
+    color: var(--white);
+    margin-bottom: 100px;
+}
+.slick-dots{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.slick-dots li{
+    list-style: none;
+    margin-right: 20px;
+    display: inline-block;
+}
+.slick-dots li button{
+    color: transparent;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+}
+/* ------valuable customer css ends -----*/
+
+/* ------get in touch css start -----*/
+#get-in-touch{
+    width: 100%;
+    background-color: #F5F5F5;
+    padding: 95px 0;
+}
+.get-in-touch-head h2{
+    font-size: var(--headding-font);
+    font-weight: bold;
+    margin-bottom: 37px;
+}
+.get-in-touch-head p{
+    font-size: var(--text-font);
+    margin-bottom: 37px;
+}
+.input-box{
+    border: none;
+}
+.comment-input{
+    height: 150px;
+    resize: none;
+    padding-top: 15px;
+}
+.btn-cs{
+    display: inline-block;
+    background-color: var(--PRIMARY-COLOR);
+    text-decoration: none;
+    color: var(--white);
+    font-size: 16px;
+    padding: 15px 25px;
+    display: inline-block;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+/* ------get in touch css ends -----*/
+
+/* ------footer css start -----*/
+#footer{
+    width: 100%;
+    padding: 95px 0;
+    background-color: #141414;
+    color: var(--white);
+}
+#footer ul li{
+    list-style: none;
+}
+#footer ul li a{
+    text-decoration: none;
+    color: var(--white);
+}
+/* ------footer css ends -----*/
+
+/* Resposive part */
+
+@media (max-width: 575.98px) {
+    #progress-bar{
+        display: none;
+    }
+}
+
+/* Resposive part */
